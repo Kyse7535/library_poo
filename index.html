@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css ">
+    <link rel="stylesheet" href="CSS/index.css" />
+    <title>Library</title>
+</head>
+
+<body>
+    <header>
+        <h1>Ma Bibliothèque</h1>
+    </header>
+    <main id="main">
+        <button id="btn_add">Ajouter livre</button>
+        <form action="index.html" id="myDIV" class="myform" method="POST">
+            <fieldset>
+                <legend>Add Book</legend>
+                <label>Title</label>
+                <br />
+                <input type="text" name="title" id="title" />
+                <br />
+                <label>Author</label>
+                <br />
+                <input type="text" name="author" id="author" />
+                <br />
+                <label>Page</label>
+                <br />
+                <input type="number" name="page" id="page" />
+                <br />
+                <label for="read">Read ? </label>
+                <input type="radio" name="read" value="yes" id="read" />Yes
+                <input type="radio" name="read" value="no" id="read" />No
+                <br />
+                <button id="btn_submit" type="button" class="myform">submit</button>
+            </fieldset>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Page number</th>
+                    <th>read</th>
+                    <th>delete</th>
+                    <th> change read status</th>
+                </tr>
+            </thead>
+            <tbody id="library"></tbody>
+        </table>
+    </main>
+    <script src="JS/js_file.js"></script>
+</body>
+
+</html>
