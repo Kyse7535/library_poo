@@ -65,16 +65,22 @@ const myLibrary = (() => {
 
     const addBookToTable = () => {
         let btn_submit = document.getElementById("btn_submit");
+
         btn_submit.addEventListener('click', function() {
             let title = document.getElementById("title").value;
             let author = document.getElementById("author").value;
             let page = document.getElementById("page").value;
             let read = document.getElementById("read").value;
 
-            let new_book = new Book(title, author, page, read);
-
-            addBookToLibrary(new_book);
-            afficher();
+            let paragr = document.getElementById('par');
+            if (title.trim() == "" || author.trim() == "" || page.trim() == "") {
+                paragr.style.display = "block";
+            } else {
+                paragr.style.display = "none";
+                let new_book = new Book(title, author, page, read);
+                addBookToLibrary(new_book);
+                afficher();
+            }
         });
     }
 

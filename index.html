@@ -20,22 +20,20 @@
                 <legend>Add Book</legend>
                 <label>Title</label>
                 <br />
-                <input type="text" name="title" id="title" />
-                <br />
+                <input type="text" name="title" id="title" minlength="1" required/>
                 <label>Author</label>
                 <br />
-                <input type="text" name="author" id="author" />
-                <br />
+                <input type="text" name="author" id="author" minlength="1" required/>
                 <label>Page</label>
                 <br />
-                <input type="number" name="page" id="page" />
-                <br />
+                <input type="number" name="page" id="page" min="1" required />
                 <label for="read">Read ? </label>
-                <input type="radio" name="read" value="yes" id="read" />Yes
-                <input type="radio" name="read" value="no" id="read" />No
+                <input type="radio" name="read" value="yes" checked id="read" /><label for="read">Yes</label>
+                <input type="radio" name="read" value="no" id="read" /><label for="read">No</label>
                 <br />
                 <button id="btn_submit" type="button" class="myform">submit</button>
             </fieldset>
+            <p id="par">Veuillez saisir tous les champs</p>
         </form>
 
         <table>
